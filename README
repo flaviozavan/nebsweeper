@@ -1,0 +1,41 @@
+
+-----------
+
+Each message can have up to 64 bytes
+    before each message, the size of it is sent in one byte
+
+t for text, tTEXT to the sever, tiTEXT to the clients
+c for new connections ciNAME
+
+The client connects, sends its name and receives:
+    pmbip, number of players, mines, bombs, id and connected players.
+    Then it receives iNAME for all the other players.
+
+l when someone leaves, li
+
+v for new turn, vi
+
+r for revealing, rcvcvcvcv
+
+s for sweeping, sc
+
+b for bomb, c is the top left cell, bc
+
+w when someone wins, w
+
+c is a byte and = abcd efgh, where a-h are binary
+    abcd = y, efgh = x
+
+-------
+
+Compiling the curses client on windows
+
+Use mingw
+Download pdcurses source code
+Extract
+cd pdcurses-x.x/win32
+mv gccwin32.mak Makefile
+make
+Now copy *.h in this folder and *.h in ..
+    to mingw's lib (not /usr/include in the shell)
+Then copy pdcurses.a as libpdcurses.a to lib in mingw
