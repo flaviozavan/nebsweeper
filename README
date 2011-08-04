@@ -1,3 +1,6 @@
+Nebsweeper is a multiplayer minesweeper game that includes a server,
+two clients, one using curses and one using SDL, and a GTK launcher to
+help starting a server or using the SDL client.
 
 -----------
 
