@@ -43,7 +43,7 @@ int main(int argc, char *argv[]){
     }
     
     //Read the style file
-    if(!gtk_builder_add_from_file(builder, "launcher.glade", &error)){
+    if(!gtk_builder_add_from_file(builder, "data/launcher.glade", &error)){
         fprintf(stderr, "GTK Builder error code %d.\n%s.\n",
             error->code, error->message);
 
