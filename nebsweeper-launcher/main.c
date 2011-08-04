@@ -31,7 +31,7 @@
 
 int main(int argc, char *argv[]){
     GtkBuilder *builder;
-    GError *error;
+    GError *error = NULL;
 
     //Initialize GTK
     gtk_init(&argc, &argv);
