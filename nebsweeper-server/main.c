@@ -40,6 +40,10 @@
 #define VERSION "1.0 RC8"
 
 int main(int argc, char *argv[]){
+    //Force line buffer
+    setlinebuf(stdout);
+    setlinebuf(stderr);
+
     //Check arguments
     if(argc < 2 || argc > 5){
         fprintf(stderr, "Usage: %s PLAYERS [MINES] [BOMBS] [PORT]\n", argv[0]);

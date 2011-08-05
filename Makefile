@@ -5,17 +5,17 @@ clean: server-clean curses-clean sdl-clean launcher-clean
 
 server curses:
 	$(MAKE) -C nebsweeper-$@
-	ln -s ../nebsweeper-$@/nebsweeper-$@ bin/
+	ln -sf ../nebsweeper-$@/nebsweeper-$@ bin/
 
 sdl:
 	$(MAKE) -C nebsweeper-$@
-	ln -s ../nebsweeper-$@/nebsweeper-$@ bin/
-	ln -s ../../nebsweeper-$@/data/{font,tiles}.png bin/data/
+	ln -sf ../nebsweeper-$@/nebsweeper-$@ bin/
+	ln -sf ../../nebsweeper-$@/data/{font,tiles}.png bin/data/
    
 launcher:
 	$(MAKE) -C nebsweeper-$@
-	ln -s ../nebsweeper-$@/nebsweeper-$@ bin/
-	ln -s ../../nebsweeper-$@/data/launcher.glade bin/data/
+	ln -sf ../nebsweeper-$@/nebsweeper-$@ bin/
+	ln -sf ../../nebsweeper-$@/data/launcher.glade bin/data/
    
 server-clean:
 	$(MAKE) clean -C nebsweeper-server
