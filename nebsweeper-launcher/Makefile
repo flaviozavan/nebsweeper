@@ -4,7 +4,8 @@ CFLAGS=-Wall -O2 `pkg-config --libs --cflags gtk+-2.0` -Wl,--export-dynamic
 all: nebsweeper-launcher
 
 clean:
-	rm -f signals.o main.o nebsweeper-launcher{,.exe}
+	rm -f signals.o main.o \
+        nebsweeper-launcher nebsweeper-launcher.exe
 
 main.o: main.c
 

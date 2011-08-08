@@ -10,7 +10,8 @@ server curses:
 sdl:
 	$(MAKE) -C nebsweeper-$@
 	ln -sf ../nebsweeper-$@/nebsweeper-$@ bin/
-	ln -sf ../../nebsweeper-$@/data/{font,tiles}.png bin/data/
+	ln -sf ../../nebsweeper-$@/data/font.png bin/data/
+	ln -sf ../../nebsweeper-$@/data/tiles.png bin/data/
    
 launcher:
 	$(MAKE) -C nebsweeper-$@
@@ -27,7 +28,8 @@ curses-clean:
 
 sdl-clean:
 	$(MAKE) clean -C nebsweeper-sdl
-	rm -f bin/nebsweeper-sdl bin/data/{font,tiles}.png
+	rm -f bin/nebsweeper-sdl bin/data/tiles.png
+	rm -f bin/nebsweeper-sdl bin/data/font.png
 
 launcher-clean:
 	$(MAKE) clean -C nebsweeper-launcher

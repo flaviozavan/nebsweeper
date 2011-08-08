@@ -4,7 +4,8 @@ CFLAGS=-O2 -Wall
 all: nebsweeper-curses
 
 clean:
-	rm -f networking.o game.o main.o screen.o nebsweeper-curses{,.exe}
+	rm -f networking.o game.o main.o screen.o \
+        nebsweeper-curses nebsweeper-curses.exe
 
 nebsweeper-curses: networking.o main.o screen.o
 	$(CC) $(CFLAGS)   -o nebsweeper-curses main.o networking.o \

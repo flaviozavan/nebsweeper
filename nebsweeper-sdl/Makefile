@@ -4,7 +4,8 @@ CFLAGS=-O2 -Wall
 all: nebsweeper-sdl
 
 clean:
-	rm -f networking.o game.o main.o screen.o nebsweeper-sdl{,.exe}
+	rm -f networking.o game.o main.o screen.o \
+        nebsweeper-sdl nebsweeper-sdl.exe
 
 nebsweeper-sdl: main.o networking.o screen.o
 	$(CC) $(CFLAGS)   -o nebsweeper-sdl main.o networking.o screen.o \
